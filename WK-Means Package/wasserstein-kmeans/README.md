@@ -26,31 +26,11 @@
 
 ## 📦 Installation
 
-### Option 1: Direct Install from GitHub (Ready Immediately, Zero Accounts Needed)
-Install the latest release directly from GitHub without requiring a PyPI account:
+Install `wasserstein-cluster` directly from GitHub using `pip` (zero accounts or setup required):
 
 ```bash
 pip install "git+https://github.com/Rikan-Saha/Clustering-using-Wasserstein-Distance.git#subdirectory=WK-Means Package/wasserstein-kmeans"
 ```
-
-### Option 2: Standard Install from PyPI
-```bash
-pip install wasserstein-cluster
-```
-
-### Optional Feature Bundles ("Extras")
-* **Interactive & publication visualizations** (Matplotlib & Bokeh):
-  ```bash
-  pip install "wasserstein-cluster[viz]"
-  ```
-* **Decoupled FastAPI inference microservice**:
-  ```bash
-  pip install "wasserstein-cluster[api]"
-  ```
-* **Full development and testing suite**:
-  ```bash
-  pip install "wasserstein-cluster[all]"
-  ```
 
 ---
 
@@ -208,24 +188,28 @@ WassersteinKMeans(
 
 ---
 
-## 🧪 Testing & Code Quality
+## 🧪 Contributing & Testing
 
-To run the automated test suite locally:
+If you are a developer looking to contribute or run the test suite locally:
 
 ```bash
-# 1. Install with development dependencies
+# 1. Clone the repository and enter the package directory
+git clone https://github.com/Rikan-Saha/Clustering-using-Wasserstein-Distance.git
+cd "Clustering-using-Wasserstein-Distance/WK-Means Package/wasserstein-kmeans"
+
+# 2. Install in editable mode with developer dependencies
 pip install -e ".[dev]"
 
-# 2. Run all unit and integration tests
+# 3. Run all unit and integration tests
 pytest
 
-# 3. Check test coverage (target: >= 85%)
+# 4. Check test coverage (target: >= 85%)
 pytest --cov=wasserstein_cluster --cov-report=term-missing
 
-# 4. Run static type checking in strict mode
+# 5. Run static type checking in strict mode
 mypy src/wasserstein_cluster
 
-# 5. Run linting
+# 6. Run linting
 ruff check .
 ```
 
